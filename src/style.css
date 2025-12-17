@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+
+@font-face {
+    font-family: 'Host';
+    src: url(../fonts/HostGrotesk-VariableFont_wght.ttf);
+}
+
+
+@font-face {
+    font-family: 'Rock';
+    src: url(../fonts/RockSalt-Regular.ttf);
+}
+
+
+body {
+    font-family: 'Host';
+    background: linear-gradient(to right, white, rgb(196, 196, 196));
+}
+
+footer {
+    font-family: 'Rock';
+}
+
+button {
+    cursor: pointer;
+}
+

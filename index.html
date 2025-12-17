@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link href="/src/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>to-do_app</title>
+  </head>
+  <body>
+    <div class="flex justify-center">
+      <header  id="top" class="flex flex-col pt-20 mb-7 justify-center gap-5">
+        <h1 id="titulo" class="text-5xl text-green-950 font-bold text-center">YOUR LIST</h1>
+        <button id="rendimiento" class="bg-green-700 w-48 text-white p-2 self-center rounded-lg" hidden>Evaluar Rendimiento</button>
+      </header>
+    </div>
+    <section id="adding-zone" class="flex justify-center">
+      <form id="todo-form" class="flex flex-col gap-5">
+        <input class="text-center w-75 border-2 border-green-500 p-2 rounded-lg focus:outline-none
+         focus:border-green-800" type="text" id="task-intro" name="entrada" placeholder="¿Qué vas a conquistar hoy?" autofocus> 
+         <div class="flex justify-center">
+            <button type="submit" class=" text-green-800 font-bold border-2 h-10 w-36 border-green-400 rounded-lg" id="add-btn">Agregar tarea</button>
+         </div>
+      </form>
+    </section>
+    <section class="flex flex-col gap-4 justify-center mt-7 lg:ml-72 lg:mr-72 lg:mt-7" id="taskzone">
+      <ul class="flex flex-col gap-4 mb-8" id="tasklist"></ul>
+    </section>
+  </body>
+  <!-- <footer class="w-screen absolute bottom-3 opacity-70 -z-10 justify-center">
+    <div class="flex w-full justify-center">
+       <h4 class="text-center font-bold text-orange-500">Camilo  Rísquez  Wojtarowski</h4>
+    </div>
+  </footer> -->
+  <script type="module" src="./src/main.js"></script>
+</html>
