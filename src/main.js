@@ -9,13 +9,10 @@ const title = document.getElementById('titulo')
 
 let misTareas = JSON.parse(localStorage.getItem('theTasks')) || [];
 
-// Función de guardado 
+
 const guardarEnLocal = () => {
     localStorage.setItem('theTasks', JSON.stringify(misTareas));
 };
-
-
-// Función para presentar la información en el ul
 
 
 const renderizarTareas = () => {
@@ -26,7 +23,7 @@ const renderizarTareas = () => {
         validacion.removeAttribute('hidden')
     }
 
-    // Recorrimiento del array de tareas y creación de elementos para la lista mostrada
+ 
 
     misTareas.forEach((objTarea, index) => {
 
@@ -41,7 +38,7 @@ const renderizarTareas = () => {
         etiqueta.className = 'bg-white w-[300px] p-3 shadow rounded flex justify-between items-center border-l-10 border-green-500';
         taskAndCheck.className = 'flex gap-6 items-center self-center justify-center';
 
-        //El texto del objeto guardado se convierte en el texto del elemento creado para la tarea
+ 
         tarea.textContent = `${objTarea.text}`;
 
         etiqueta.appendChild(tarea)
@@ -72,7 +69,6 @@ const renderizarTareas = () => {
     });
 }
 
-// Evento de submit del formulario
 
 formulario.addEventListener('submit', (event) => {
     
@@ -81,11 +77,10 @@ formulario.addEventListener('submit', (event) => {
     let taskToDo = inputTarea.value.trim();
 
     if (taskToDo === ""){ 
-        alert('Escribe algo!');
+        alert('Necesitas ingresar texto');
         return;
     }
 
-    // Se crea el objeto para la nueva tarea
     const nuevaTareaObj = {
         text: taskToDo,
         completed: false
@@ -94,7 +89,7 @@ formulario.addEventListener('submit', (event) => {
     misTareas.push(nuevaTareaObj);
 
 
-    // Se guarda y se muestra la tarea
+
     guardarEnLocal();
     renderizarTareas();
 
@@ -102,8 +97,6 @@ formulario.addEventListener('submit', (event) => {
     inputTarea.focus();
 })
 
-
-// Guardar en local storage
  
 
 validacion.addEventListener('click', (event) => {
